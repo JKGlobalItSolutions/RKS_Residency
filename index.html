@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>RKS Residency</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        
         <meta content="" name="keywords">
         <meta content="" name="description">
 
@@ -24,6 +25,9 @@
         <!-- Main Stylesheet File -->
         <link href="css/hover-style.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
+        <style>
+     
+        </style>
     </head>
 
     <body>
@@ -36,15 +40,26 @@
             <nav class="main-menu top-menu">
                 <ul>
                     <li class="active"><a href="index.html">Home</a></li>
-                    <!-- <li><a href="about.html">About Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+
+                    <li><a href="contact.html">Contact Us</a></li> 
+                    <!-- 
                     <li><a href="room.html">Apartments</a></li>
                     <li><a href="amenities.html">Amenities</a></li>
                     <li><a href="login.html">Login</a></li>
-                    <li><a href="contact.html">Contact Us</a></li> -->
-                    <li><a href="booking.html">Booking</a></li>
+                    -->
                     
                 </ul>
             </nav>
+            <link rel="stylesheet" href="">
+<a href="https://wa.me/9384997035" class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+    </a>
+           
+            <section class="call-buton"><a class="cc-calto-action-ripple" href="contact.html"><i class="fa fa-phone"></i><span class="num">9384997035</span>
+            </a>
+            </section>
         </header>
         <!-- Header Section End -->
         
@@ -119,6 +134,7 @@
                     </div>
                 </div>
             </div>
+           
             <!-- Search Section End -->
             
             <!-- Slider Section Start -->
@@ -557,124 +573,12 @@
         <!-- Subscribe Section Start -->
         <div id="subscribe">
             <div class="container">
-                <!-- <div class="section-header">
-                    <h2>Subscribe for Special Offer</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in mi libero. Quisque convallis, enim at venenatis tincidunt.
-                    </p>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="subscribe-form">
-                            <form>
-                                <input type="email" required="required" placeholder="Enter your email here" />
-                                <button>submit</button>
-                            </form>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
         <!-- Subscribe Section End -->
         
         <!-- Booking Section Start -->
-        <div id="booking">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Room Booking</h2>
-                    <p>
-                        Experience hassle-free booking with our user-friendly platform, ensuring a smooth reservation process from start to finish
-                    </p>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="booking-form">
-                            <div id="success"></div>
-                            <form name="sentMessage" id="bookingForm" novalidate="novalidate">
-                                <div class="form-row">
-                                    <div class="control-group col-sm-6">
-                                        <label>First Name</label>
-                                        <input type="text" class="form-control" id="fname" placeholder="E.g. John" required="required" data-validation-required-message="Please enter first name" />
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="control-group col-sm-6">
-                                        <label>Last Name</label>
-                                        <input type="text" class="form-control" id="lname" placeholder="E.g. Sina" required="required" data-validation-required-message="Please enter last name" />
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="control-group col-sm-6">
-                                        <label>Mobile</label>
-                                        <input type="text" class="form-control" id="mobile" placeholder="E.g. +1 234 567 8900" required="required" data-validation-required-message="Please enter your mobile number" />
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="control-group col-sm-6">
-                                        <label>Email</label>
-                                        <input type="email" class="form-control" id="email" placeholder="E.g. email@example.com" required="required" data-validation-required-message="Please enter your email" />
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="control-group col-sm-6">
-                                        <label>Check-In</label>
-                                        <input type="text" class="form-control datetimepicker-input" id="date-1" data-toggle="datetimepicker" data-target="#date-1" placeholder="E.g. MM/DD/YYYY" required="required" data-validation-required-message="Please enter date"/>
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="control-group col-sm-6">
-                                        <label>Check-Out</label>
-                                        <input type="text" class="form-control datetimepicker-input" id="date-2" data-toggle="datetimepicker" data-target="#date-2" placeholder="E.g. MM/DD/YYYY" required="required" data-validation-required-message="Please enter date"/>
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                </div>
-                                <div class="form-row">
-                                    <div class="control-group col-sm-6">
-                                        <label>Adult</label>
-                                        <select class="custom-select" id="adult" required="required" data-validation-required-message="Please select one"/>
-                                            <option value="0">0</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                            <option value="9">9</option>
-                                            <option value="10">10</option>
-                                        </select>
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="control-group col-sm-6">
-                                        <label>KId</label>
-                                        <select class="custom-select" id="kid" required="required" data-validation-required-message="Please select one"/>
-                                            <option value="0">0</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                            <option value="9">9</option>
-                                            <option value="10">10</option>
-                                        </select>
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <label>Special Request</label>
-                                    <input type="text" class="form-control" id="request" placeholder="E.g. Special Request" required="required" data-validation-required-message="Please enter your special request" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="button"><button type="submit" id="bookingButton">Book Now</button></div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         <!-- Booking Section End -->
         
         <!-- Call Section Start -->
@@ -745,5 +649,14 @@
   
         <!-- Main Javascript File -->
         <script src="js/main.js"></script>
+        <script>
+            // Opens sticky-chat automatically within 5 seconds of page load
+        document.addEventListener("DOMContentLoaded", function () {
+          setTimeout(function () {
+            document.getElementById("offchat-menu").checked = true;
+          }, 5000);
+        });
+        
+        </script>
     </body>
 </html>
