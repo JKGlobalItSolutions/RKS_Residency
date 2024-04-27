@@ -1269,3 +1269,20 @@ textarea.form-control {
         background: #ffba5a;
         color: #fff;
         border-radius: 50%; }
+
+        @media (min-width:425px){
+          #one{
+           margin-right: 65%;
+          }
+        }
+        @media (min-width:768px){
+          #one{
+           margin-right: 80%;
+          }
+        }
+        @media (min-width:1024px){
+          #one{
+           margin-right: auto;
+          }
+        }
+        
