@@ -23,6 +23,16 @@
 
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
+    
+    <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+  ></script>
+    <script type="text/javascript">
+      (function() {
+      emailjs.init("CsCtVu_www8HfK0hT");
+      })(); </script>
+   
   </head>
   <body>
     
@@ -104,7 +114,7 @@
         <div class="row">
           <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
             
-            <form action="#" method="post" class="bg-white p-md-5 p-4 mb-5 border">
+            <form  class="bg-white p-md-5 p-4 mb-5 border">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <label class="text-black font-weight-bold" for="name">Name</label>
@@ -171,10 +181,15 @@
               </div>
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="submit" value="Book Now" class="btn btn-primary text-white py-3 px-5 font-weight-bold">
+                  <!-- <input type="submit" value="Book Now" class="btn btn-primary text-white py-3 px-5 font-weight-bold"> -->
+                  <button class="btn btn-primary text-white  py-3 px-5 font-weight-bold" type="button " onclick="sendMessage()">Send Whatsapp</button><br><br>
+                  
+                  <button type="button" onclick="sendemail()" class="btn btn-primary">SEND MESSAGE</button>
                 </div>
               </div>
             </form>
+
+            
 
           </div>
           <div class="col-md-5" data-aos="fade-up" data-aos-delay="200">
@@ -274,7 +289,88 @@
     <script src="js/jquery.timepicker.min.js"></script> 
 
     
-
     <script src="js/main.js"></script>
+    <script>
+      
+      function sendMessage() {
+          var phonenumber = "+7806844491"; // Your WhatsApp phone number
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var phone = document.getElementById("phone").value;
+          var adults = document.getElementById("adults").value;
+          var children = document.getElementById("children").value;
+          var checkin_date = document.getElementById("checkin_date").value;
+          var checkout_date = document.getElementById("checkout_date").value;
+          var message = document.getElementById("message").value;
+
+          var url = "https://wa.me/" + phonenumber + "?text=" +
+              "Name: " + name + "%0a" +
+              "Email: " + email + "%0a" +
+              "Phone: " + phone + "%0a" +
+              "Message: " + message + "%0a" +
+              "Adults: " + adults + "%0a" +
+              "Checkin_date: " + checkin_date + "%0a" +
+              "Checkout_date: " + checkout_date + "%0a" +
+              "Children: " + children + "%0a%0a" +
+              "This message is sent via the contact form on our website.";
+
+          window.open(url, '_blank').focus();
+      }
+    </script>
+    <script>
+                
+                function sendemail() {
+      var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var adults = document.getElementById("adults").value;
+        var children = document.getElementById("children").value;
+        var checkin_date = document.getElementById("checkin_date").value;
+        var checkout_date = document.getElementById("checkout_date").value;
+        var message = document.getElementById("message").value;
+
+        var templateParams = {
+          email: email,
+        name: name,
+        phone: phone,
+        adults:adults,
+        children:children,
+        checkin_date:checkin_date,
+        checkout_date:checkout_date,
+        message: message,
+        };
+
+        emailjs
+          .send("service_q3v5y3m", "template_9duo9p4", templateParams)
+          .then(function (response) {
+            console.log("SUCCESS!", response.status, response.text);
+            window.alert("Sent successfully!");
+          });
+      }
+      
+      // var name = document.getElementById("name").value;
+      //   var email = document.getElementById("email").value;
+      //   var phone = document.getElementById("phone").value;
+      //   var adults = document.getElementById("adults").value;
+      //   var children = document.getElementById("children").value;
+      //   var checkin_date = document.getElementById("checkin_date").value;
+      //   var checkout_date = document.getElementById("checkout_date").value;
+      //   var message = document.getElementById("message").value;
+
+    // var templateParams = {
+        // email: email,
+        // name: name,
+        // phone: phone,
+        // adults:adults,
+        // children:children,
+        // checkin_date:checkin_date,
+        // checkout_date:checkout_date,
+        // message: message,
+    //   };
+    
+    
+         
+      </script>
+      
   </body>
 </html>
