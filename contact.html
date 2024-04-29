@@ -104,7 +104,7 @@
         <div class="row">
           <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
             
-            <form action="#" method="post" class="bg-white p-md-5 p-4 mb-5 border">
+            <form action="https://wa.me/9940049831" class="bg-white p-md-5 p-4 mb-5 border">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <label for="name">Name</label>
@@ -130,11 +130,10 @@
               </div>
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="submit" value="Send Message" class="btn btn-primary text-white font-weight-bold">
+                <a href="https://wa.me/9940049831"> <input  type="submit" value="Send Message"  class="btn btn-primary text-white font-weight-bold"></a>  
                 </div>
               </div>
             </form>
-
           </div>
           <div class="col-md-5" data-aos="fade-up" data-aos-delay="200">
             <div class="row">
@@ -149,7 +148,7 @@
       </div>
     </section>
 
-    <section class="section testimonial-section bg-light">
+    <!-- <section class="section testimonial-section bg-light">
       <div class="container">
         <div class="row justify-content-center text-center mb-5">
           <div class="col-md-7">
@@ -225,11 +224,11 @@
             </div>
 
           </div>
-            <!-- END slider -->
+           END slider 
         </div>
 
       </div>
-    </section>
+    </section> -->
 
     
     
@@ -251,18 +250,18 @@
           <div class="row mb-4">
             <div class="col-md-3 mb-5">
               <ul class="list-unstyled link">
-                <li><a href="#">About Us</a></li>
+                <li><a href="about.html">About Us</a></li>
                 <li><a href="#">Terms &amp; Conditions</a></li>
                 <li><a href="#">Privacy Policy</a></li>
-               <li><a href="#">Rooms</a></li>
+               <li><a href="rooms.html">Rooms</a></li>
               </ul>
             </div>
             <div class="col-md-3 mb-5">
               <ul class="list-unstyled link">
-                <li><a href="#">The Rooms &amp; Suites</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Restaurant</a></li>
+                <li><a href="rooms.html">The Rooms &amp; Suites</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <!-- <li><a href="#">Restaurant</a></li> -->
               </ul>
             </div>
             <div class="col-md-3 mb-5 pr-md-5 contact-info">
@@ -316,5 +315,30 @@
     
 
     <script src="js/main.js"></script>
+    <script>
+                
+      function sendemail(){
+      
+      var email=document.getElementById("email").value;
+      var name=document.getElementById("name").value;
+      var mobile=document.getElementById("mobile").value;
+      var message=document.getElementById("message").value;
+      
+      var templateParams = {
+          email: email,
+          name: name,
+          mobile: mobile,
+          message: message,
+        };
+      
+        emailjs.send('service_0kzmsh9', 'template_f1x9uq6', templateParams)
+      .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+       window.alert("Sent successfully!");
+       
+      })
+      }
+         
+      </script>
   </body>
 </html>
