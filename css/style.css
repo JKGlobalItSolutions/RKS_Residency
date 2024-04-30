@@ -262,7 +262,7 @@ textarea.form-control {
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   cursor: pointer;
-  margin-right: 80px; }
+  margin-right: 100px; }
   .site-menu-toggle span {
     display: block;
     position: absolute;
@@ -1078,7 +1078,7 @@ textarea.form-control {
     border-radius: 10px; }
 
 .room {
-  position: relative;
+  position: absolute;
   display: block; }
   .room .img-wrap {
     position: relative;
@@ -1381,4 +1381,10 @@ textarea.form-control {
               .my-5 {
                 margin-top: 28rem !important;
               }
+            }
+        
+             @media (max-width:768px){
+              .check-availabilty {
+                margin-top: -100px;
+              }   
             }
