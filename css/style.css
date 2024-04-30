@@ -1275,6 +1275,19 @@ textarea.form-control {
            margin-right: 40%;
           }
         }
+        @media (min-width:320px){
+          #one{
+           margin-right: 30%;
+          }
+          .my-5 {
+            margin-top: 30rem !important;
+          }
+        }
+        @media (min-width:425px){
+          #one{
+           margin-right: 50%;
+          }
+        }
         @media (min-width:768px){
           #one{
            margin-right: 70%;
