@@ -189,14 +189,18 @@
             
           </div>
         </div>
-        <section class="section bg-light pb-0"  >
+        <section class="section bg-light pb-0">
           <div class="container">
-           
             <div class="row check-availabilty" id="next">
               <div class="block-32" data-aos="fade-up" data-aos-offset="-200">
-    
                 <form action="#">
                   <div class="row">
+                    <!-- Add Name Section -->
+                    <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+                      <label for="name" class="font-weight-bold text-black">Name</label>
+                      <input type="text" id="name" class="form-control">
+                    </div>
+                    <!-- Check-in Date Section -->
                     <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
                       <label for="checkin_date" class="font-weight-bold text-black">Check In</label>
                       <div class="field-icon-wrap">
@@ -204,6 +208,7 @@
                         <input type="text" id="checkin_date" class="form-control">
                       </div>
                     </div>
+                    <!-- Check-out Date Section -->
                     <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
                       <label for="checkout_date" class="font-weight-bold text-black">Check Out</label>
                       <div class="field-icon-wrap">
@@ -211,48 +216,39 @@
                         <input type="text" id="checkout_date" class="form-control">
                       </div>
                     </div>
+                    <!-- Adults Section -->
                     <div class="col-md-6 mb-3 mb-md-0 col-lg-3">
-                      <div class="row">
-                        <div class="col-md-6 mb-3 mb-md-0">
-                          <label for="adults" class="font-weight-bold text-black">Adults</label>
-                          <div class="field-icon-wrap">
-                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                            <select name="" id="adults" class="form-control">
-                              <option >0</option>
-                              <option >1</option>
-                              <option  >2</option>
-                              <option  >3</option>
-                              <option  >4</option>
-                              <option  >5</option>
-                              <option  >6</option>
-                              <option  >7</option>
-                              <option  >8</option>
-                            </select>
-                          </div>
-                        </div>
-                        <div class="col-md-6 mb-3 mb-md-0">
-                          <label for="children" class="font-weight-bold text-black">Children</label>
-                          <div class="field-icon-wrap">
-                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                            <select name="" id="children" class="form-control">
-                              <option >0</option>
-                              <option >1</option>
-                              <option  >2</option>
-                              <option  >3</option>
-                              <option  >4</option>
-                              <option  >5</option>
-                              <option  >6</option>
-                              <option  >7</option>
-                              <option  >8</option>
-                            </select>
-                          </div>
-                        </div>
+                      <label for="adults" class="font-weight-bold text-black">Adults</label>
+                      <div class="field-icon-wrap">
+                        <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                        <select name="adults" id="adults" class="form-control">
+                          <option value="0">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <!-- Add more options if needed -->
+                        </select>
                       </div>
                     </div>
+                    <!-- Children Section -->
                     <div class="col-md-6 col-lg-3 align-self-end">
-                  <button class="btn btn-primary text-white my-4 py-3 px-5 font-weight-bold" type="button" onclick="sendData()">Book Now </button><br><br>
-
-                      <!-- <button class="btn btn-primary btn-block text-white">Book Now</button> -->
+                      <label for="children" class="font-weight-bold text-black">Children</label>
+                      <div class="field-icon-wrap">
+                        <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                        <select name="children" id="children" class="form-control">
+                          <option >0</option>
+                          <option >1</option>
+                          <option >2</option>
+                          <option >3</option>
+                          <option >4</option>
+                          <!-- Add more options if needed -->
+                        </select>
+                      </div>
+                    </div>
+                    <!-- Book Now Button -->
+                    <div class="col-md-6 col-lg-3 align-self-end " >
+                      <button class="btn btn-primary text-white my-4 py-3 px-5 font-weight-bold " type="button" onclick="sendData()">Book Now</button><br><br>
                     </div>
                   </div>
                 </form>
@@ -260,6 +256,7 @@
             </div>
           </div>
         </section>
+        
       </div>
       
       <a class="mouse smoothscroll" href="#next">

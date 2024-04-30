@@ -31,8 +31,9 @@ function sendData() {
   }
 
   function sendMessage() {
-    var phonenumber = "+7806844491"; // Your WhatsApp phone number
+    var phonenumber = "+9486032329"; // Your WhatsApp phone number
   
+    var name = document.getElementById("name").value;
     var adults = document.getElementById("adults").value;
     var children = document.getElementById("children").value;
     var checkin_date = document.getElementById("checkin_date").value;
@@ -40,6 +41,7 @@ function sendData() {
 
     var url = "https://wa.me/" + phonenumber + "?text=" +
      
+      "Name: " + name+ "%0a" +
       "Checkin_date: " + checkin_date + "%0a" +
       "Checkout_date: " + checkout_date + "%0a" +
       "Adults: " + adults + "%0a" +
@@ -51,13 +53,14 @@ function sendData() {
 
   function sendemail() {
     
+    var name = document.getElementById("name").value;
     var adults = document.getElementById("adults").value;
     var children = document.getElementById("children").value;
     var checkin_date = document.getElementById("checkin_date").value;
     var checkout_date = document.getElementById("checkout_date").value;
 
     var templateParams = {
-  
+      name: name,
       adults: adults,
       children: children,
       checkin_date: checkin_date,
