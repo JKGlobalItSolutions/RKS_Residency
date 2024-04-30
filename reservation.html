@@ -125,10 +125,9 @@
                   <input type="text" id="phone" class="form-control ">
                 </div>
               </div>
-          
               <div class="row">
                 <div class="col-md-12 form-group">
-                  <label class="text-black font-weight-bold" for="email">Email</label>
+                  <label class="text-black font-weight-bold" for >Email</label>
                   <input type="email" id="email" class="form-control ">
                 </div>
               </div>
@@ -150,10 +149,14 @@
                   <div class="field-icon-wrap">
                     <div class="icon"><span class="ion-ios-arrow-down"></span></div>
                     <select name="" id="adults" class="form-control">
-                      <option value="">1</option>
-                      <option value="">2</option>
-                      <option value="">3</option>
-                      <option value="">4+</option>
+                      <option >1</option>
+                      <option >2</option>
+                      <option >3</option>
+                      <option >4</option>
+                      <option >5</option>
+                      <option >6</option>
+                      <option >7</option>
+                      <option >8</option>
                     </select>
                   </div>
                 </div>
@@ -162,16 +165,18 @@
                   <div class="field-icon-wrap">
                     <div class="icon"><span class="ion-ios-arrow-down"></span></div>
                     <select name="" id="children" class="form-control">
-                      <option value="">1</option>
-                      <option value="">2</option>
-                      <option value="">3</option>
-                      <option value="">4+</option>
+                      <option >1</option>
+                      <option  >2</option>
+                      <option  >3</option>
+                      <option  >4</option>
+                      <option  >5</option>
+                      <option  >6</option>
+                      <option  >7</option>
+                      <option  >8</option>
                     </select>
                   </div>
                 </div>
               </div>
-
-              
 
               <div class="row mb-4">
                 <div class="col-md-12 form-group">
@@ -182,9 +187,10 @@
               <div class="row">
                 <div class="col-md-6 form-group">
                   <!-- <input type="submit" value="Book Now" class="btn btn-primary text-white py-3 px-5 font-weight-bold"> -->
-                  <button class="btn btn-primary text-white  py-3 px-5 font-weight-bold" type="button " onclick="sendMessage()">Send Whatsapp</button><br><br>
-                  
-                  <button type="button" onclick="sendemail()" class="btn btn-primary">SEND MESSAGE</button>
+                  <!-- <button class="btn btn-primary text-white  py-3 px-5 font-weight-bold" type="button " onclick=" sendMessage(); sendemail(); ">Send Whatsapp</button><br><br> -->
+                  <button class="btn btn-primary text-white py-3 px-5 font-weight-bold" type="button" onclick="sendData()">Book now</button><br><br>
+
+                  <!-- <button type="button" onclick="sendemail()" class="btn btn-primary">Send Email</button> -->
                 </div>
               </div>
             </form>
@@ -292,61 +298,118 @@
     <script src="js/main.js"></script>
     <script>
       
-      function sendMessage() {
-          var phonenumber = "+7806844491"; // Your WhatsApp phone number
-          var name = document.getElementById("name").value;
-          var email = document.getElementById("email").value;
-          var phone = document.getElementById("phone").value;
-          var adults = document.getElementById("adults").value;
-          var children = document.getElementById("children").value;
-          var checkin_date = document.getElementById("checkin_date").value;
-          var checkout_date = document.getElementById("checkout_date").value;
-          var message = document.getElementById("message").value;
+      // function sendMessage() {
+      //     var phonenumber = "+7806844491"; // Your WhatsApp phone number
+      //     var name = document.getElementById("name").value;
+      //     var email = document.getElementById("email").value;
+      //     var phone = document.getElementById("phone").value;
+      //     var adults = document.getElementById("adults").value;
+      //     var children = document.getElementById("children").value;
+      //     var checkin_date = document.getElementById("checkin_date").value;
+      //     var checkout_date = document.getElementById("checkout_date").value;
+      //     var message = document.getElementById("message").value;
 
-          var url = "https://wa.me/" + phonenumber + "?text=" +
-              "Name: " + name + "%0a" +
-              "Email: " + email + "%0a" +
-              "Phone: " + phone + "%0a" +
-              "Message: " + message + "%0a" +
-              "Adults: " + adults + "%0a" +
-              "Checkin_date: " + checkin_date + "%0a" +
-              "Checkout_date: " + checkout_date + "%0a" +
-              "Children: " + children + "%0a%0a" +
-              "This message is sent via the contact form on our website.";
+      //     var url = "https://wa.me/" + phonenumber + "?text=" +
+      //         "Name: " + name + "%0a" +
+      //         "Email: " + email + "%0a" +
+      //         "Phone: " + phone + "%0a" +
+      //         "Message: " + message + "%0a" +
+      //         "Adults: " + adults + "%0a" +
+      //         "Checkin_date: " + checkin_date + "%0a" +
+      //         "Checkout_date: " + checkout_date + "%0a" +
+      //         "Children: " + children + "%0a%0a" +
+      //         "This message is sent via the contact form on our website.";
 
-          window.open(url, '_blank').focus();
-      }
-    </script>
-    <script>
+      //     window.open(url, '_blank').focus();
+      // }
+   
                 
-                function sendemail() {
-      var name = document.getElementById("name").value;
-        var email = document.getElementById("email").value;
-        var phone = document.getElementById("phone").value;
-        var adults = document.getElementById("adults").value;
-        var children = document.getElementById("children").value;
-        var checkin_date = document.getElementById("checkin_date").value;
-        var checkout_date = document.getElementById("checkout_date").value;
-        var message = document.getElementById("message").value;
+      //           function sendemail() {
+      // var name = document.getElementById("name").value;
+      //   var email = document.getElementById("email").value;
+      //   var phone = document.getElementById("phone").value;
+      //   var adults = document.getElementById("adults").value;
+      //   var children = document.getElementById("children").value;
+      //   var checkin_date = document.getElementById("checkin_date").value;
+      //   var checkout_date = document.getElementById("checkout_date").value;
+      //   var message = document.getElementById("message").value;
 
-        var templateParams = {
-          email: email,
-        name: name,
-        phone: phone,
-        adults:adults,
-        children:children,
-        checkin_date:checkin_date,
-        checkout_date:checkout_date,
-        message: message,
-        };
+      //   var templateParams = {
+      //     email: email,
+      //   name: name,
+      //   phone: phone,
+      //   adults:adults,
+      //   children:children,
+      //   checkin_date:checkin_date,
+      //   checkout_date:checkout_date,
+      //   message: message,
+      //   };
 
-        emailjs
-          .send("service_q3v5y3m", "template_9duo9p4", templateParams)
-          .then(function (response) {
-            console.log("SUCCESS!", response.status, response.text);
-            window.alert("Sent successfully!");
-          });
-      }
+      //   emailjs
+      //     .send("service_q3v5y3m", "template_9duo9p4", templateParams)
+      //     .then(function (response) {
+      //       console.log("SUCCESS!", response.status, response.text);
+      //       window.alert("Sent successfully!");
+      //     });
+      // }
+      function sendData() {
+    sendMessage();
+    sendemail();
+  }
+
+  function sendMessage() {
+    var phonenumber = "+7806844491"; // Your WhatsApp phone number
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    var adults = document.getElementById("adults").value;
+    var children = document.getElementById("children").value;
+    var checkin_date = document.getElementById("checkin_date").value;
+    var checkout_date = document.getElementById("checkout_date").value;
+    var message = document.getElementById("message").value;
+
+    var url = "https://wa.me/" + phonenumber + "?text=" +
+      "Name: " + name + "%0a" +
+      "Email: " + email + "%0a" +
+      "Phone: " + phone + "%0a" +
+      "Message: " + message + "%0a" +
+      "Adults: " + adults + "%0a" +
+      "Checkin_date: " + checkin_date + "%0a" +
+      "Checkout_date: " + checkout_date + "%0a" +
+      "Children: " + children + "%0a%0a" +
+      "This message is sent via the contact form on our website.";
+
+    window.open(url, '_blank').focus();
+  }
+
+  function sendemail() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    var adults = document.getElementById("adults").value;
+    var children = document.getElementById("children").value;
+    var checkin_date = document.getElementById("checkin_date").value;
+    var checkout_date = document.getElementById("checkout_date").value;
+    var message = document.getElementById("message").value;
+
+    var templateParams = {
+      email: email,
+      name: name,
+      phone: phone,
+      adults: adults,
+      children: children,
+      checkin_date: checkin_date,
+      checkout_date: checkout_date,
+      message: message,
+    };
+
+    emailjs
+      .send("service_q3v5y3m", "template_9duo9p4", templateParams)
+      .then(function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+        window.alert("Sent successfully!");
+      });
+  }
       
       // var name = document.getElementById("name").value;
       //   var email = document.getElementById("email").value;

@@ -23,12 +23,110 @@
 
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
+    <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+  ></script>
+    <script type="text/javascript">
+      (function() {
+      emailjs.init("CsCtVu_www8HfK0hT");
+      })(); </script>
+    <style>
+       /* animation */
+       .site-hero {
+              position: relative;
+              height: 100vh;
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+              animation: slideBackground 10s infinite; /* Adjust timing as needed */
+            }
+        
+            .overlay {
+              position: relative;
+              z-index: 1;
+            }
+        
+            .site-hero-inner {
+              position: relative;
+              z-index: 2;
+              text-align: center;
+              padding-top: 100px; /* Adjust as needed */
+            }
+        
+            .custom-caption {
+              font-size: 24px;
+              font-weight: bold;
+            }
+        
+            .heading {
+              font-size: 48px;
+              font-weight: bold;
+              color: #fff;
+              margin-top: 20px;
+            }
+        
+            .mouse {
+              position: absolute;
+              bottom: 40px;
+              left: 50%;
+              transform: translateX(-50%);
+              z-index: 3;
+            }
+        
+            .mouse-icon {
+              width: 30px;
+              height: 50px;
+              border: 2px solid #fff;
+              border-radius: 25px;
+              position: relative;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+            }
+        
+            .mouse-wheel {
+              width: 4px;
+              height: 10px;
+              border: 2px solid #fff;
+              border-radius: 50%;
+              animation: wheel-move 1.5s infinite;
+            }
+        
+            @keyframes wheel-move {
+              0% {
+                opacity: 0;
+              }
+              50% {
+                opacity: 1;
+              }
+              100% {
+                opacity: 0;
+              }
+            }
+        
+            @keyframes slideBackground {
+              0% {
+                background-image: url(images/hero\ img.jpg);
+              }
+              33.33% {
+                background-image: url(images/new\ room.jpg);
+              }
+              66.67% {
+                background-image: url(images/hero\ room.jpg);
+              }
+              100% {
+                background-image: url(images/new\ room2.jpg);
+              }
+            }
+    </style>
   </head>
   <body>
     <a href="https://wa.me/9940049831" class="float" target="_blank">
       <i class="fa fa-whatsapp my-float"></i>
       </a>
-      <section class="call-buton"><a class="cc-calto-action-ripple" href="contact.html"><i class="fa fa-phone"></i><span class="num">9940049831</span>
+      <section class="call-buton"><a class="cc-calto-action-ripple" href="contact.html"><i class="fa fa-phone"></i><span class="num"></span>
       </a>
       </section>
     <header class="site-header js-site-header">
@@ -82,22 +180,94 @@
     </header>
     <!-- END head -->
 
-    <section class="site-hero overlay" style="background-image: url(images/hero\ img.jpg)" data-stellar-background-ratio="0.5">
+    <section class="site-hero overlay">
       <div class="container">
         <div class="row site-hero-inner justify-content-center align-items-center">
           <div class="col-md-10 text-center" data-aos="fade-up">
-            <span class="custom-caption text-uppercase text-white d-block  mb-3">Welcome To RKS RESIDENCY <span class="fa fa-star text-primary"></span>   Hotel</span>
+            <span class="custom-caption text-uppercase text-white d-block mb-3">Welcome To RKS RESIDENCY <span class="fa fa-star text-primary"></span> Hotel</span>
             <h1 class="heading">A Best Place To Stay</h1>
+            
           </div>
         </div>
-      </div>
+        <section class="section bg-light pb-0"  >
+          <div class="container">
+           
+            <div class="row check-availabilty" id="next">
+              <div class="block-32" data-aos="fade-up" data-aos-offset="-200">
+    
+                <form action="#">
+                  <div class="row">
+                    <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+                      <label for="checkin_date" class="font-weight-bold text-black">Check In</label>
+                      <div class="field-icon-wrap">
+                        <div class="icon"><span class="icon-calendar"></span></div>
+                        <input type="text" id="checkin_date" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+                      <label for="checkout_date" class="font-weight-bold text-black">Check Out</label>
+                      <div class="field-icon-wrap">
+                        <div class="icon"><span class="icon-calendar"></span></div>
+                        <input type="text" id="checkout_date" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-3 mb-md-0 col-lg-3">
+                      <div class="row">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                          <label for="adults" class="font-weight-bold text-black">Adults</label>
+                          <div class="field-icon-wrap">
+                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                            <select name="" id="adults" class="form-control">
+                              <option >1</option>
+                              <option  >2</option>
+                              <option  >3</option>
+                              <option  >4</option>
+                              <option  >5</option>
+                              <option  >6</option>
+                              <option  >7</option>
+                              <option  >8</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-3 mb-md-0">
+                          <label for="children" class="font-weight-bold text-black">Children</label>
+                          <div class="field-icon-wrap">
+                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                            <select name="" id="children" class="form-control">
+                              <option >1</option>
+                              <option  >2</option>
+                              <option  >3</option>
+                              <option  >4</option>
+                              <option  >5</option>
+                              <option  >6</option>
+                              <option  >7</option>
+                              <option  >8</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 align-self-end">
+                  <button class="btn btn-primary text-white my-4 py-3 px-5 font-weight-bold" type="button" onclick="sendData()">Book Now </button><br><br>
 
+                      <!-- <button class="btn btn-primary btn-block text-white">Book Now</button> -->
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      
       <a class="mouse smoothscroll" href="#next">
         <div class="mouse-icon">
           <span class="mouse-wheel"></span>
         </div>
       </a>
-    </section>
+      
+    </section>     <br>
+
     <!-- END section -->
 
     <!-- <section class="section bg-light pb-0"  >
@@ -172,7 +342,7 @@
             <img src="images/room1.jpg" alt="Image" class="img-fluid rounded">
           </div>
           <div class="col-md-12 col-lg-4 order-lg-1" data-aos="fade-up">
-            <h2 class="heading">Welcome!</h2>
+            <h2 class="heading text-dark">Welcome!</h2>
             <p class="mb-4">Welcome to RKS Residency!
 
               Experience the epitome of comfort, luxury, and hospitality at RKS Residency. We are delighted to extend our warmest welcome to you.</p>
@@ -190,7 +360,7 @@
       <div class="container">
         <div class="row justify-content-center text-center mb-5">
           <div class="col-md-7">
-            <h2 class="heading" data-aos="fade-up">Rooms &amp; Suites</h2>
+            <h2 class="heading text-dark" data-aos="fade-up">Rooms &amp; Suites</h2>
             <p data-aos="fade-up" data-aos-delay="100">Welcome to the epitome of luxury and comfort at RKS Residency. Our hotel offers a range of meticulously designed rooms and suites, each thoughtfully curated to cater to your every need and preference. Whether you're seeking a cozy retreat for a solo traveler or spacious accommodations for a family getaway, we have the perfect option for you.</p>
           </div>
         </div>
@@ -198,11 +368,12 @@
           <div class="col-md-6 col-lg-4" data-aos="fade-up">
             <a href="#" class="room">
               <figure class="img-wrap">
-                <img src="images/room 3.jpg" alt="Free website template" class="img-fluid mb-3">
+                <img src="images/room1.jpg" alt="Free website template" class="img-fluid mb-3">
               </figure>
               <div class="p-3 text-center room-info">
-                <h2>Single Room</h2>
-                <span class="text-uppercase letter-spacing-1">90$ / per night</span>
+                <h2>Standard Room</h2>
+                <span class="text-uppercase letter-spacing-1">start from ₹1000 / non AC <br>
+                AC room ₹1500 <br>(with 2 adults , additional bed can be added ₹500 extra)</span>
               </div>
             </a>
           </div>
@@ -222,10 +393,10 @@
           <div class="col-md-6 col-lg-4" data-aos="fade-up">
             <a href="#" class="room">
               <figure class="img-wrap">
-                <img src="images/room1.jpg" alt="Free website template" class="img-fluid mb-3">
+                <img src="images/new room.jpg" alt="Free website template" class="img-fluid mb-3">
               </figure>
               <div class="p-3 text-center room-info">
-                <h2>Presidential Room</h2>
+                <h2>Double Room</h2>
                 <span class="text-uppercase letter-spacing-1">250$ / per night</span>
               </div>
             </a>
@@ -241,7 +412,7 @@
       <div class="container">
         <div class="row justify-content-center text-center mb-5">
           <div class="col-md-7">
-            <h2 class="heading" data-aos="fade-up">Photos</h2>
+            <h2 class="heading text-dark" data-aos="fade-up">Photos</h2>
             <p data-aos="fade-up" data-aos-delay="100">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
           </div>
         </div>
@@ -258,7 +429,7 @@
                 <a href="images/photosa 2.jpg" data-fancybox="images" data-caption="Caption for this image"><img src="images/photosa 2.jpg" alt="Image placeholder" class="img-fluid"></a>
               </div>
               <div class="slider-item">
-                <a href="images/photos 3.jpg" data-fancybox="images" data-caption="Caption for this image"><img src="images/photos 3.jpg" alt="Image placeholder" class="img-fluid"></a>
+                <a href="images/new room.jpg" data-fancybox="images" data-caption="Caption for this image"><img src="images/new room.jpg" alt="Image placeholder" class="img-fluid"></a>
               </div>
               <div class="slider-item">
                 <a href="images/bathroom.jpg" data-fancybox="images" data-caption="Caption for this image"><img src="images/bathroom.jpg" alt="Image placeholder" class="img-fluid"></a>
@@ -368,5 +539,66 @@
     
 
     <script src="js/main.js"></script>
+    <!-- <script src="js/home.js"></script> -->
+    <script>
+      function sendData() {
+    sendMessage();
+    sendemail();
+  }
+
+  function sendMessage() {
+    var phonenumber = "+7806844491"; // Your WhatsApp phone number
+  
+    var adults = document.getElementById("adults").value;
+    var children = document.getElementById("children").value;
+    var checkin_date = document.getElementById("checkin_date").value;
+    var checkout_date = document.getElementById("checkout_date").value;
+
+    var url = "https://wa.me/" + phonenumber + "?text=" +
+     
+      "Checkin_date: " + checkin_date + "%0a" +
+      "Checkout_date: " + checkout_date + "%0a" +
+      "Adults: " + adults + "%0a" +
+      "Children: " + children + "%0a%0a" +
+      "This message is sent via the contact form on our website.";
+
+    window.open(url, '_blank').focus();
+  }
+
+  function sendemail() {
+    
+    var adults = document.getElementById("adults").value;
+    var children = document.getElementById("children").value;
+    var checkin_date = document.getElementById("checkin_date").value;
+    var checkout_date = document.getElementById("checkout_date").value;
+
+    var templateParams = {
+  
+      adults: adults,
+      children: children,
+      checkin_date: checkin_date,
+      checkout_date: checkout_date,
+    };
+
+    emailjs
+      .send("service_q3v5y3m", "template_iybzqqw", templateParams)
+      .then(function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+        window.alert("Sent successfully!");
+      });
+  }
+    </script>
+    <script>
+      // Optionally, you can add JavaScript to handle the smooth scrolling
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+    
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    </script>
   </body>
 </html>
