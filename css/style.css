@@ -262,7 +262,7 @@ textarea.form-control {
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   cursor: pointer;
-  margin-right: 40px; }
+  margin-right: 80px; }
   .site-menu-toggle span {
     display: block;
     position: absolute;
@@ -1270,14 +1270,14 @@ textarea.form-control {
         color: #fff;
         border-radius: 50%; }
 
-        @media (min-width:425px){
+        @media (min-width:375px){
           #one{
-           margin-right: 65%;
+           margin-right: 40%;
           }
         }
         @media (min-width:768px){
           #one{
-           margin-right: 80%;
+           margin-right: 70%;
           }
         }
         @media (min-width:1024px){
@@ -1361,4 +1361,11 @@ textarea.form-control {
                 margin-top:16px;
             }
             
-           
+            #down{
+              margin-top: 200px;
+            }
+            @media (min-width:425px){
+              .my-5 {
+                margin-top: 28rem !important;
+              }
+            }
