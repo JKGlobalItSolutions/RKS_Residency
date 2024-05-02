@@ -227,6 +227,12 @@
                           <option value="2">2</option>
                           <option value="3">3</option>
                           <option value="4">4</option>
+                          <option value="4">5</option>
+                          <option value="4">6</option>
+                          <option value="4">7</option>
+                          <option value="4">8</option>
+                          <option value="4">9</option>
+                          <option value="4">10+</option>
                           <!-- Add more options if needed -->
                         </select>
                       </div>
@@ -237,11 +243,17 @@
                       <div class="field-icon-wrap">
                         <div class="icon"><span class="ion-ios-arrow-down"></span></div>
                         <select name="children" id="children" class="form-control">
-                          <option >0</option>
-                          <option >1</option>
-                          <option >2</option>
-                          <option >3</option>
-                          <option >4</option>
+                          <option value="0">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="4">5</option>
+                          <option value="4">6</option>
+                          <option value="4">7</option>
+                          <option value="4">8</option>
+                          <option value="4">9</option>
+                          <option value="4">10+</option>
                           <!-- Add more options if needed -->
                         </select>
                       </div>
@@ -548,14 +560,15 @@
 
   function sendMessage() {
     var phonenumber = "+9486032329"; // Your WhatsApp phone number
-  
+
+    var name = document.getElementById("name").value;
     var adults = document.getElementById("adults").value;
     var children = document.getElementById("children").value;
     var checkin_date = document.getElementById("checkin_date").value;
     var checkout_date = document.getElementById("checkout_date").value;
 
     var url = "https://wa.me/" + phonenumber + "?text=" +
-     
+    "name: " + name + "%0a" +
       "Checkin_date: " + checkin_date + "%0a" +
       "Checkout_date: " + checkout_date + "%0a" +
       "Adults: " + adults + "%0a" +
@@ -566,14 +579,16 @@
   }
 
   function sendemail() {
-    
+
+       
+    var name = document.getElementById("name").value;
     var adults = document.getElementById("adults").value;
     var children = document.getElementById("children").value;
     var checkin_date = document.getElementById("checkin_date").value;
     var checkout_date = document.getElementById("checkout_date").value;
 
     var templateParams = {
-  
+      name:name,
       adults: adults,
       children: children,
       checkin_date: checkin_date,
