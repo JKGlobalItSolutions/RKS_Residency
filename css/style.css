@@ -1279,9 +1279,9 @@ textarea.form-control {
           #one{
            margin-right: 30%;
           }
-          .my-5 {
+          /* .my-5 {
             margin-top: 30rem !important;
-          }
+          } */
         }
         @media (min-width:425px){
           #one{
@@ -1375,13 +1375,9 @@ textarea.form-control {
             }
             
             #down{
-              margin-top: 200px;
+              margin-top: 300px;
             }
-            @media (min-width:425px){
-              .my-5 {
-                margin-top: 28rem !important;
-              }
-            }
+           
         
              @media (max-width:768px){
               .check-availabilty {
