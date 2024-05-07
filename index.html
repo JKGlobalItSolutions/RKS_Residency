@@ -212,19 +212,19 @@
           <div class="container">
             <div class="row check-availabilty" id="next">
               <div class="block-32" data-aos="fade-up" data-aos-offset="-200">
-                <form action="#">
+                <form id="bookingForm" onsubmit="submitForm(event)">
                   <div class="row">
                     <!-- Add Name Section -->
                     <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
                       <label for="name" class="font-weight-bold text-black">Name</label>
-                      <input type="text" id="name" class="form-control">
+                      <input type="text" id="name" class="form-control" required>
                     </div>
                     <!-- Check-in Date Section -->
                     <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
                       <label for="checkin_date" class="font-weight-bold text-black">Check In</label>
                       <div class="field-icon-wrap">
                         <div class="icon"><span class="icon-calendar"></span></div>
-                        <input type="text" id="checkin_date" class="form-control">
+                        <input type="text" id="checkin_date" class="form-control" required>
                       </div>
                     </div>
                     <!-- Check-out Date Section -->
@@ -232,7 +232,7 @@
                       <label for="checkout_date" class="font-weight-bold text-black">Check Out</label>
                       <div class="field-icon-wrap">
                         <div class="icon"><span class="icon-calendar"></span></div>
-                        <input type="text" id="checkout_date" class="form-control">
+                        <input type="text" id="checkout_date" class="form-control" required>
                       </div>
                     </div>
                     <!-- Adults Section -->
@@ -240,7 +240,8 @@
                       <label for="adults" class="font-weight-bold text-black">Adults</label>
                       <div class="field-icon-wrap">
                         <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                        <select name="adults" id="adults" class="form-control">
+                        <select name="adults" id="adults" class="form-control" required>
+                          <option value="0">0</option>
                           <option value="0">0</option>
                           <option value="1">1</option>
                           <option value="2">2</option>
@@ -251,8 +252,8 @@
                           <option value="7">7</option>
                           <option value="8">8</option>
                           <option value="9">9</option>
-                          <option value="10">10+</option>
-                          <!-- Add more options if needed -->
+                          <option value="10+">10+</option>
+                          <!-- Add other options as needed -->
                         </select>
                       </div>
                     </div>
@@ -261,7 +262,8 @@
                       <label for="children" class="font-weight-bold text-black">Children</label>
                       <div class="field-icon-wrap">
                         <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                        <select name="children" id="children" class="form-control">
+                        <select name="children" id="children" class="form-control" required>
+                          <option value="0">0</option>
                           <option value="0">0</option>
                           <option value="1">1</option>
                           <option value="2">2</option>
@@ -272,17 +274,20 @@
                           <option value="7">7</option>
                           <option value="8">8</option>
                           <option value="9">9</option>
-                          <option value="10">10+</option>
-                          <!-- Add more options if needed -->
+                          <option value="10+">10+</option>
+                          <!-- Add other options as needed -->
                         </select>
                       </div>
                     </div>
                     <!-- Book Now Button -->
-                    <div class="col-md-6 col-lg-3 align-self-end " >
-                      <button class="btn btn-primary text-white my-4 py-3 px-5 font-weight-bold " type="button" onclick="sendData()">Book Now</button><br><br>
+                    <div class="col-md-6 col-lg-3 align-self-end">
+                      <button class="btn btn-primary text-white my-4 py-3 px-5 font-weight-bold" type="submit">Book Now</button>
                     </div>
                   </div>
                 </form>
+                
+                
+                
               </div>
             </div>
           </div>
@@ -312,7 +317,7 @@
             <h2 class="heading text-dark">Welcome!</h2>
             <p class="mb-4">Welcome to RKS Residency! Experience the epitome of comfort, luxury, and hospitality at RKS Residency. We are delighted to extend our warmest welcome to you.</p>
             <p>
-              <a href="#" class="btn btn-primary text-white py-2 mr-3">Know More</a> 
+              <a href="index.html" class="btn btn-primary text-white py-2 mr-3">Know More</a> 
             </p>
           </div>
         </div>
@@ -347,7 +352,7 @@
              </span> </span>
             <h2 class="mb-4">Standard Room</h2>
             <p>Experience the height of luxury with exclusive rates on our presidential suites, including complimentary champagne and gourmet dinner.</p>
-            <p><a href="#" class="btn btn-primary text-white">Book Now</a></p>
+            <p><a href="reservation.html" class="btn btn-primary text-white">Book Now</a></p>
           </div>
         </div>
         <div class="site-block-half d-block d-lg-flex bg-white" data-aos="fade" data-aos-delay="100">
@@ -356,7 +361,7 @@
             <span class="d-block mb-4"><span class="display-5 text-primary">AC started from ₹2000</span> <span class="text-uppercase letter-spacing-2"></span> </span>
             <h2 class="mb-4">Double Room</h2>
             <p>Enjoy discounted rates on spacious family rooms, complimentary meals for children, and access to kid-friendly amenities.</p>
-            <p><a href="#" class="btn btn-primary text-white">Book Now</a></p>
+            <p><a href="reservation.html" class="btn btn-primary text-white">Book Now</a></p>
           </div>
       </div>
     </section>
@@ -445,8 +450,9 @@
             </ul>
           </div>
           <div class="col-md-3 mb-5 pr-md-5 contact-info">
-            <!-- <li>198 West 21th Street, <br> Suite 721 New York NY 10016</li> -->
-            <p><span class="d-block"><span class="ion-ios-location h5 mr-3 text-primary"></span>Address:</span> <span>  Tiruvennanallur,  <br> Tiruvannamalai, Tamil Nadu 606601</span></p>
+            <p><span class="d-block"><span class="ion-ios-location h5 mr-3 text-primary"></span>Address:</span> <span>  NO.32k/G2, OldBy-Pass Road, <br>
+              opp.AGP Paint & HardWare Shop, 
+              <br> Thiruvannamalai, Tamil Nadu <br> Pincode- 606601</span></p>
             <p><span class="d-block"><span class="ion-ios-telephone h5 mr-3 text-primary"></span>Phone:</span> <span>9486032329</span></p>
             <p><span class="d-block"><span class="ion-ios-email h5 mr-1 text-primary"></span>Email:</span> <span> Residencyrks@gmail.com</span></p>
           </div>
@@ -497,10 +503,12 @@
     <script src="js/main.js"></script>
     <!-- <script src="js/home.js"></script> -->
     <script>
-      function sendData() {
+      function submitForm(event) {
+    event.preventDefault(); // Prevent default form submission
     sendMessage();
-    sendemail();
+    sendemail(); // Call the function to send the email
   }
+  
 
   function sendMessage() {
     var phonenumber = "+9486032329"; // Your WhatsApp phone number
@@ -519,12 +527,18 @@
       "Children: " + children + "%0a%0a" +
       "This message is sent via the contact form on our website.";
 
-    window.open(url, '_blank').focus();
+    // window.open(url, '_blank').focus();
+    var link = document.createElement('a');
+    link.href = url;
+    link.target = '_blank';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   }
 
-  function sendemail() {
+  
 
-       
+  function sendemail() {
     var name = document.getElementById("name").value;
     var adults = document.getElementById("adults").value;
     var children = document.getElementById("children").value;
@@ -532,18 +546,21 @@
     var checkout_date = document.getElementById("checkout_date").value;
 
     var templateParams = {
-      name:name,
+      name: name,
       adults: adults,
       children: children,
       checkin_date: checkin_date,
       checkout_date: checkout_date,
     };
 
-    emailjs
-      .send("service_q3v5y3m", "template_iybzqqw", templateParams)
+    emailjs.send("service_q3v5y3m", "template_iybzqqw", templateParams)
       .then(function (response) {
         console.log("SUCCESS!", response.status, response.text);
         window.alert("Sent successfully!");
+      })
+      .catch(function (error) {
+        console.error("Error sending email:", error);
+        window.alert("Failed to send email. Please try again later.");
       });
   }
     </script>

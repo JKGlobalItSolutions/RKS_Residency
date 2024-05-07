@@ -8,6 +8,8 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="" />
+    <link rel="icon" href="images/logo3.png">
+
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=|Roboto+Sans:400,700|Playfair+Display:400,700">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -114,92 +116,91 @@
         <div class="row">
           <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
             
-            <form  class="bg-white p-md-5 p-4 mb-5 border">
+            <form id="bookingForm" class="bg-white p-md-5 p-4 mb-5 border" onsubmit="sendData(); event.preventDefault(); return false;" >
               <div class="row">
-                <div class="col-md-6 form-group">
-                  <label class="text-black font-weight-bold" for="name">Name</label>
-                  <input type="text" id="name" class="form-control ">
-                </div>
-                <div class="col-md-6 form-group">
-                  <label class="text-black font-weight-bold" for="phone">Phone</label>
-                  <input type="text" id="phone" class="form-control ">
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12 form-group">
-                  <label class="text-black font-weight-bold" for >Email</label>
-                  <input type="email" id="email" class="form-control ">
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <label class="text-black font-weight-bold" for="checkin_date">Date Check In</label>
-                  <input type="text" id="checkin_date" class="form-control">
-                </div>
-                <div class="col-md-6 form-group">
-                  <label class="text-black font-weight-bold" for="checkout_date">Date Check Out</label>
-                  <input type="text" id="checkout_date" class="form-control">
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <label for="adults" class="font-weight-bold text-black">Adults</label>
-                  <div class="field-icon-wrap">
-                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="adults" class="form-control">
-                      <option >0</option>
-                      <option >1</option>
-                      <option >2</option>
-                      <option >3</option>
-                      <option >4</option>
-                      <option >5</option>
-                      <option >6</option>
-                      <option >7</option>
-                      <option >8</option>
-                      <option >9</option>
-                      <option >10+</option>
-                    </select>
+                  <div class="col-md-6 form-group">
+                      <label class="text-black font-weight-bold" for="name">Name</label>
+                      <input type="text" id="name" class="form-control" required>
                   </div>
-                </div>
-                <div class="col-md-6 form-group">
-                  <label for="children" class="font-weight-bold text-black">Children</label>
-                  <div class="field-icon-wrap">
-                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                    <select name="" id="children" class="form-control">
-                      <option >0</option>
-                      <option >1</option>
-                      <option  >2</option>
-                      <option  >3</option>
-                      <option  >4</option>
-                      <option  >5</option>
-                      <option  >6</option>
-                      <option  >7</option>
-                      <option  >8</option>
-                      <option  >9</option>
-                      <option  >10+</option>
-                    </select>
+                  <div class="col-md-6 form-group">
+                      <label class="text-black font-weight-bold" for="phone">Phone</label>
+                      <input type="text" id="phone" class="form-control" required>
                   </div>
-                </div>
               </div>
-
+              <div class="row">
+                  <div class="col-md-12 form-group">
+                      <label class="text-black font-weight-bold" for="email">Email</label>
+                      <input type="email" id="email" class="form-control" required>
+                  </div>
+              </div>
+          
+              <div class="row">
+                  <div class="col-md-6 form-group">
+                      <label class="text-black font-weight-bold" for="checkin_date">Date Check In</label>
+                      <input type="text" id="checkin_date" class="form-control" required>
+                  </div>
+                  <div class="col-md-6 form-group">
+                      <label class="text-black font-weight-bold" for="checkout_date">Date Check Out</label>
+                      <input type="text" id="checkout_date" class="form-control" required>
+                  </div>
+              </div>
+          
+              <div class="row">
+                  <div class="col-md-6 form-group">
+                      <label for="adults" class="font-weight-bold text-black">Adults</label>
+                      <div class="field-icon-wrap">
+                          <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                          <select name="" id="adults" class="form-control" >
+                              <option value="">Select</option>
+                              <option value="0">0</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                              <option value="10+">10+</option>
+                          </select>
+                      </div>
+                  </div>
+                  <div class="col-md-6 form-group">
+                      <label for="children" class="font-weight-bold text-black">Children</label>
+                      <div class="field-icon-wrap">
+                          <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                          <select name="" id="children" class="form-control" >
+                              <option value="">Select</option>
+                              <option value="0">0</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                              <option value="7">7</option>
+                              <option value="8">8</option>
+                              <option value="9">9</option>
+                              <option value="10+">10+</option>
+                          </select>
+                      </div>
+                  </div>
+              </div>
+          
               <div class="row mb-4">
-                <div class="col-md-12 form-group">
-                  <label class="text-black font-weight-bold" for="message">Notes</label>
-                  <textarea name="message" id="message" class="form-control " cols="30" rows="8"></textarea>
-                </div>
+                  <div class="col-md-12 form-group">
+                      <label class="text-black font-weight-bold" for="message">Notes</label>
+                      <textarea name="message" id="message" class="form-control" cols="30" rows="8"></textarea>
+                  </div>
               </div>
               <div class="row">
-                <div class="col-md-6 form-group">
-                  <!-- <input type="submit" value="Book Now" class="btn btn-primary text-white py-3 px-5 font-weight-bold"> -->
-                  <!-- <button class="btn btn-primary text-white  py-3 px-5 font-weight-bold" type="button " onclick=" sendMessage(); sendemail(); ">Send Whatsapp</button><br><br> -->
-                  <button class="btn btn-primary text-white py-3 px-5 font-weight-bold" type="button" onclick="sendData()">Book now</button><br><br>
-
-                  <!-- <button type="button" onclick="sendemail()" class="btn btn-primary">Send Email</button> -->
-                </div>
+                  <div class="col-md-6 form-group">
+                      <button class="btn btn-primary text-white py-3 px-5 font-weight-bold" type="submit">Book now</button>
+                  </div>
               </div>
-            </form>
+          </form>
+          
 
             
 
@@ -208,7 +209,7 @@
             <div class="row">
               <div class="col-md-3 mb-5 pr-md-5 contact-info">
                 <!-- <li>198 West 21th Street, <br> Suite 721 New York NY 10016</li> -->
-                <p><span class="d-block"><span class="ion-ios-location h5 mr-3 text-primary"></span>Address:</span> <span>  Tiruvennanallur,  <br> Tiruvannamalai, Tamil Nadu 606601</span></p>
+                <p><span class="d-block"><span class="ion-ios-location h5 mr-3 text-primary"></span>Address:</span> NO.32k/G2, OldBy-Pass Road, opp.AGP Paint & HardWare Shop,   <br> Thiruvannamalai, Tamil Nadu <br>Pincode-606601</p>
                 <p><span class="d-block"><span class="ion-ios-telephone h5 mr-3 text-primary"></span>Phone:</span> <span>9486032329</span></p>
                 <p><span class="d-block"><span class="ion-ios-email h5 text-primary"></span>Email:</span><span style="font-size: large;">Residencyrks@gmail.com</span></p>
               </div>
@@ -245,6 +246,7 @@
                <li><a href="rooms.html">Rooms</a></li>
               </ul>
             </div>
+
             <div class="col-md-3 mb-5">
               <ul class="list-unstyled link">
                 <li><a href="rooms.html">The Rooms &amp; Suites</a></li>
@@ -254,11 +256,12 @@
               </ul>
             </div>
             <div class="col-md-3 mb-5 pr-md-5 contact-info">
-              <!-- <li>198 West 21th Street, <br> Suite 721 New York NY 10016</li> -->
-              <p><span class="d-block"><span class="ion-ios-location h5 mr-3 text-primary"></span>Address:</span> <span>  Tiruvennanallur,  <br> Tiruvannamalai, Tamil Nadu 606601</span></p>
+              <p><span class="d-block"><span class="ion-ios-location h5 mr-3 text-primary"></span>Address:</span> <span>  NO.32k/G2, OldBy-Pass Road, <br>
+                opp.AGP Paint & HardWare Shop, 
+                <br> Thiruvannamalai, Tamil Nadu <br> Pincode- 606601</span></p>
               <p><span class="d-block"><span class="ion-ios-telephone h5 mr-3 text-primary"></span>Phone:</span> <span>9486032329</span></p>
-              <p><span class="d-block"><span class="ion-ios-email h5 mr-2  text-primary"></span>Email:</span><span>Residencyrks@gmail.com</span></p>
-            </div>
+              <p><span class="d-block"><span class="ion-ios-email h5 mr-1 text-primary"></span>Email:</span> <span> Residencyrks@gmail.com</span></p>
+            </div>  
             <div class="col-md-3 mb-5">
               <p>Land line number </p>
               <!-- <form action="#" class="footer-newsletter">
@@ -365,6 +368,30 @@
     sendemail();
   }
 
+  // function sendMessage() {
+  //   var phonenumber = "+9486032329"; // Your WhatsApp phone number
+  //   var name = document.getElementById("name").value;
+  //   var email = document.getElementById("email").value;
+  //   var phone = document.getElementById("phone").value;
+  //   var adults = document.getElementById("adults").value;
+  //   var children = document.getElementById("children").value;
+  //   var checkin_date = document.getElementById("checkin_date").value;
+  //   var checkout_date = document.getElementById("checkout_date").value;
+  //   var message = document.getElementById("message").value;
+
+  //   var url = "https://wa.me/" + phonenumber + "?text=" +
+  //     "Name: " + name + "%0a" +
+  //     "Email: " + email + "%0a" +
+  //     "Phone: " + phone + "%0a" +
+  //     "Message: " + message + "%0a" +
+  //     "Adults: " + adults + "%0a" +
+  //     "Checkin_date: " + checkin_date + "%0a" +
+  //     "Checkout_date: " + checkout_date + "%0a" +
+  //     "Children: " + children + "%0a%0a" +
+  //     "This message is sent via the contact form on our website.";
+
+  //   window.open(url, '_blank').focus();
+  // }
   function sendMessage() {
     var phonenumber = "+9486032329"; // Your WhatsApp phone number
     var name = document.getElementById("name").value;
@@ -387,10 +414,15 @@
       "Children: " + children + "%0a%0a" +
       "This message is sent via the contact form on our website.";
 
-    window.open(url, '_blank').focus();
-  }
-
+    var link = document.createElement('a');
+    link.href = url;
+    link.target = '_blank';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
   function sendemail() {
+    
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
     var phone = document.getElementById("phone").value;
@@ -411,37 +443,29 @@
       message: message,
     };
 
+    if (name === "" || email === "" || phone === "" || adults === "" || children === "" || checkin_date === "" || checkout_date === "") {
+      alert("Please fill in all required fields");
+      return;
+    }
     emailjs
       .send("service_q3v5y3m", "template_9duo9p4", templateParams)
       .then(function (response) {
         console.log("SUCCESS!", response.status, response.text);
-        window.alert("Sent successfully!");
+        alert("Email sent successfully!");
+        // Optionally, you can reset the form after successful submission
+        document.getElementById("bookingForm").reset();
+      }, function (error) {
+        console.error("FAILED...", error);
+        alert("Failed to send email. Please try again later.");
       });
   }
-      
-      // var name = document.getElementById("name").value;
-      //   var email = document.getElementById("email").value;
-      //   var phone = document.getElementById("phone").value;
-      //   var adults = document.getElementById("adults").value;
-      //   var children = document.getElementById("children").value;
-      //   var checkin_date = document.getElementById("checkin_date").value;
-      //   var checkout_date = document.getElementById("checkout_date").value;
-      //   var message = document.getElementById("message").value;
-
-    // var templateParams = {
-        // email: email,
-        // name: name,
-        // phone: phone,
-        // adults:adults,
-        // children:children,
-        // checkin_date:checkin_date,
-        // checkout_date:checkout_date,
-        // message: message,
-    //   };
-    
-    
-         
       </script>
+      <script>
+        
+      </script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
       
   </body>
 </html>
