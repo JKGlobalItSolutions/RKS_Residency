@@ -21,10 +21,12 @@
     <link rel="stylesheet" href="css/fancybox.min.css">
     
     <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+    
 
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
     <script
     type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
@@ -135,6 +137,7 @@
                 background-image: url(images/hero\ room.jpg);
               }
               100% {
+                
                 background-image: url(images/new\ room2.jpg);
               }
             }
@@ -142,12 +145,17 @@
     </style>
   </head>
   <body>
-    <a href="https://wa.me/9486032329" class="float" target="_blank">
+    
+    <a href="https://wa.me/9080417024" class="float" target="_blank">
       <i class="fa fa-whatsapp my-float"></i>
       </a>
-      <section class="call-buton"><a class="cc-calto-action-ripple" href="contact.html"><i class="fa fa-phone"></i><span class="num"></span>
-      </a>
-      </section>
+      <div class="call-buton">
+        <a href="tel:9655569355" type="button" class="cc-calto-action-ripple">
+          <i class="fa-solid fa-phone"></i>
+        </a>
+      </div>
+
+      
     <header class="site-header js-site-header">
       <div class="container-fluid">
         <div class="row justify-content-center">
@@ -279,8 +287,12 @@
                         </select>
                       </div>
                     </div>
+                    <div class="col-md-6 mb-3 mb-lg-0 col-lg-3 mt-4">
+                      <label for="name" class="font-weight-bold text-black">Mobile No</label>
+                      <input type="tel" id="mobileno" class="form-control" required>
+                    </div>
                     <!-- Book Now Button -->
-                    <div class="col-md-6 col-lg-3 align-self-end">
+                    <div class="col-md-6 col-lg-3 align-self-end ">
                       <button class="btn btn-primary text-white my-4 py-3 px-5 font-weight-bold" type="submit">Book Now</button>
                     </div>
                   </div>
@@ -304,7 +316,7 @@
     </section>    
 
     <!-- END section -->
-
+<br><br><br><br><br><br>
    
 
     <section class="py-5  bg-light" id="down">
@@ -453,7 +465,7 @@
             <p><span class="d-block"><span class="ion-ios-location h5 mr-3 text-primary"></span>Address:</span> <span>  NO.32k/G2, OldBy-Pass Road, <br>
               opp.AGP Paint & HardWare Shop, 
               <br> Thiruvannamalai, Tamil Nadu <br> Pincode- 606601</span></p>
-            <p><span class="d-block"><span class="ion-ios-telephone h5 mr-3 text-primary"></span>Phone:</span> <span>9486032329</span></p>
+            <p><span class="d-block"><span class="ion-ios-telephone h5 mr-3 text-primary"></span>Phone:</span> <span>9080417024</span></p>
             <p><span class="d-block"><span class="ion-ios-email h5 mr-1 text-primary"></span>Email:</span> <span> Residencyrks@gmail.com</span></p>
           </div>
           <div class="col-md-3 mb-5">
@@ -506,25 +518,30 @@
       function submitForm(event) {
     event.preventDefault(); // Prevent default form submission
     sendMessage();
-    sendemail(); // Call the function to send the email
+    // sendemail(); 
+    // Call the function to send the email
   }
   
 
   function sendMessage() {
-    var phonenumber = "+9486032329"; // Your WhatsApp phone number
+    // var phonenumber = "+9486032329"; 
+    var phonenumber = "+9080417024"; 
+    // Your WhatsApp phone number
 
     var name = document.getElementById("name").value;
     var adults = document.getElementById("adults").value;
     var children = document.getElementById("children").value;
     var checkin_date = document.getElementById("checkin_date").value;
     var checkout_date = document.getElementById("checkout_date").value;
+    var mobileno = document.getElementById("mobileno").value;
 
     var url = "https://wa.me/" + phonenumber + "?text=" +
-    "name: " + name + "%0a" +
+    "Name: " + name + "%0a" +
       "Checkin_date: " + checkin_date + "%0a" +
       "Checkout_date: " + checkout_date + "%0a" +
       "Adults: " + adults + "%0a" +
       "Children: " + children + "%0a%0a" +
+      "Mobile: " + mobileno + "%0a" +
       "This message is sent via the contact form on our website.";
 
     // window.open(url, '_blank').focus();
@@ -544,6 +561,7 @@
     var children = document.getElementById("children").value;
     var checkin_date = document.getElementById("checkin_date").value;
     var checkout_date = document.getElementById("checkout_date").value;
+    var mobileno = document.getElementById("mobileno").value;
 
     var templateParams = {
       name: name,
@@ -551,6 +569,7 @@
       children: children,
       checkin_date: checkin_date,
       checkout_date: checkout_date,
+      mobileno: mobileno,
     };
 
     emailjs.send("service_q3v5y3m", "template_iybzqqw", templateParams)
@@ -577,4 +596,5 @@
       });
     </script>
   </body>
+
 </html>
